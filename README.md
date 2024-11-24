@@ -2,11 +2,11 @@
 
 Flutter研修のGit演習用レポジトリです。
 
+## 使用するExtension
+- [Git Graph - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [GitHub Pull Requests - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+
 ## Gitのコマンド確認
-
-### インストール
-
-### バージョン確認とusernameの設定
 
 以下のコマンドでバージョンが返ってこない場合はgitがインストールされていないため、インストールを再度お試しください。
 
@@ -32,56 +32,47 @@ user.name=[YOUR_USERNAME]
 
 ## 演習: プルリクエストを作成してコミットする
 
-### ブランチの準備
+### 1. Git GraphのExtensionをインストールする
+<img src="./assets/git-graph.png" width="50%">
 
-```sh
-git checkout -b feature/[username]/create-profile
+参考: [Git Graph - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 
-# 例
-git checkout -b feature/htsuruo/create-profile
-```
+
+### 2. ブランチの作成
+
+コマンドパレット（`Cmd+Shift+P`）を開き、検索窓に`git graph`などを入力して「View Git Graph」を選択します。
+<img src="./assets/view-git-graph.png" width="50%">
+
+| Step.01 | Step.02 |
+| --- | --- |
+| ![](./assets/create_branch_01.png) | ![](./assets/create_branch_02.png) |
 
 ブランチが切り替わったかを確認します。作成したブランチに`*`マーク（環境次第）が付いていればOKです。
 
-```sh
-git branch
 
-# 例
-* feature/[username]/create-profile
-  main
-```
-
-### コミットする
+### 3. コミットする
 
 1. `self_introduction`フォルダ配下に、`[自分の名前]_[自分の名字].md`のファイルを作成し自己紹介を[Markdown記法](https://ja.wikipedia.org/wiki/Markdown)を使って書いてみましょう。[hideki_tsuruoka.md](self_introduction/hideki_tsuruoka.md)を参考にしてください。
     - 参考: [Markdown記法一覧](https://qiita.com/oreo/items/82183bfbaac69971917f)
 
-1. 記入が終わったらコミットします。
+1. 記入が終わったらコミットします。左側のアクティビティパネルからブランチアイコンをクリックしコミットメッセージを入れてコミットします。
 
-```sh
-# 変更差分を見る
-git status
-
-# modifiedファイルをstagedにあげる（ファイルをコミット対象にする）
-git add [YOUR_NAME].md
-# 例: git add hideki_tsuruoka.md
-
-
-# コミットする
-git commit -m "Create file to introduce myself" # 日本語でもOKです
-
-# プッシュする
-# ※この際に、はじめてプッシュする場合はUsernameとPasswordが要求されるので適宜入力してください。
-# - Username: GitHubのusername
-# - Password: ご自身で生成したPAT
-git push origin HEAD
-
-```
+<img src="./assets/commit.png" width="50%">
 
 ## プルリクエストを作成する
 
 先程の作業内容をレビュワーに「受け入れて下さい」というリクエストを出します。
+方法は大きく2つありますが、どちらでも好きな方法で試してください。
 
+### 「GitHub Pull Requests」でIDXから作成する方法
+1. 
+1. 
+
+<img src="./assets/create-pull-request.png" width="50%">
+
+
+
+### Webのコンソール（github.com）から作成する方法
 1. GitHubのWebコンソール（GUI）で操作します。
 1. レビュワーがわかるようにコメントを書きましょう。
 1. レビュワーは作業内容に問題が無いことを確認したらマージします。
@@ -91,12 +82,5 @@ git push origin HEAD
 
 `main`ブランチに切り替えて、みなさんの変更内容を確認しましょう。
 
-```sh
-# mainブランチにチェックアウト（切り替え）して
-git checkout main
-
-# リモートブランチから変更内容を取得し、ローカルブランチに取り込む
-git pull origin
-```
-
-これで、`self_introduction`のファイルを見ると各人のプロフィールファイルを確認することができます。
+Git Graphを確認して、みなさんの変更内容を確認しましょう。
+これで、`self_introduction`のファイルを見ると各人のプロフィールファイルを確認できるようになりました。
