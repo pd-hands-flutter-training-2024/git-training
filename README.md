@@ -82,5 +82,6 @@ user.name=[YOUR_USERNAME]
 
 `main`ブランチに切り替えて、みなさんの変更内容を確認しましょう。
 
-Git Graphを確認して、みなさんの変更内容を確認しましょう。
+<img src="./assets/checkout-to-main.png" width="50%">
+
 これで、`self_introduction`のファイルを見ると各人のプロフィールファイルを確認できるようになりました。
