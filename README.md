@@ -2,11 +2,11 @@
 
 Flutter研修のGit演習用レポジトリです。
 
+## 使用するExtension
+- [Git Graph - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+- [GitHub Pull Requests - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+
 ## Gitのコマンド確認
-
-### インストール
-
-### バージョン確認とusernameの設定
 
 以下のコマンドでバージョンが返ってこない場合はgitがインストールされていないため、インストールを再度お試しください。
 
@@ -62,7 +62,17 @@ user.name=[YOUR_USERNAME]
 ## プルリクエストを作成する
 
 先程の作業内容をレビュワーに「受け入れて下さい」というリクエストを出します。
+方法は大きく2つありますが、どちらでも好きな方法で試してください。
 
+### 「GitHub Pull Requests」でIDXから作成する方法
+1. 
+1. 
+
+<img src="./assets/create-pull-request.png" width="50%">
+
+
+
+### Webのコンソール（github.com）から作成する方法
 1. GitHubのWebコンソール（GUI）で操作します。
 1. レビュワーがわかるようにコメントを書きましょう。
 1. レビュワーは作業内容に問題が無いことを確認したらマージします。
@@ -72,12 +82,5 @@ user.name=[YOUR_USERNAME]
 
 `main`ブランチに切り替えて、みなさんの変更内容を確認しましょう。
 
-```sh
-# mainブランチにチェックアウト（切り替え）して
-git checkout main
-
-# リモートブランチから変更内容を取得し、ローカルブランチに取り込む
-git pull origin
-```
-
-これで、`self_introduction`のファイルを見ると各人のプロフィールファイルを確認することができます。
+Git Graphを確認して、みなさんの変更内容を確認しましょう。
+これで、`self_introduction`のファイルを見ると各人のプロフィールファイルを確認できるようになりました。
