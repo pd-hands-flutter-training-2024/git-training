@@ -1,4 +1,4 @@
-# hands-on-git-practice
+# git-training
 
 Flutter研修のGit演習用レポジトリです。
 
