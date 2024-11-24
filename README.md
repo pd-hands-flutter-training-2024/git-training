@@ -55,8 +55,9 @@ user.name=[YOUR_USERNAME]
 1. `self_introduction`フォルダ配下に、`[自分の名前]_[自分の名字].md`のファイルを作成し自己紹介を[Markdown記法](https://ja.wikipedia.org/wiki/Markdown)を使って書いてみましょう。[hideki_tsuruoka.md](self_introduction/hideki_tsuruoka.md)を参考にしてください。
     - 参考: [Markdown記法一覧](https://qiita.com/oreo/items/82183bfbaac69971917f)
 
-1. 記入が終わったらコミットします。
+1. 記入が終わったらコミットします。左側のアクティビティパネルからブランチアイコンをクリックしコミットメッセージを入れてコミットします。
 
+<img src="./assets/commit.png" width="50%">
 
 ## プルリクエストを作成する
 
